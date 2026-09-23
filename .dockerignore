@@ -1,0 +1,7 @@
+node_modules
+**/bin
+**/obj
+backend/src/SignageCms.Api/storage
+backend/src/SignageCms.Api/wwwroot/assets
+tests/shots
+

@@ -1,0 +1,391 @@
+{
+  "login": {
+    "accessToken": "eyJhbGciOiJIUzI1NiIs\u2026<redacted>",
+    "accessTokenExpiresAt": "2026-09-21T18:08:14.7980703Z",
+    "refreshToken": "Emuysg\u2026<redacted>",
+    "refreshTokenExpiresAt": "2026-10-05T17:53:14.8159004Z",
+    "user": {
+      "id": "e3886383-d8ef-428a-a067-1e799adfd56c",
+      "email": "admin@demo.local",
+      "fullName": "Demo Owner",
+      "organizationId": "2154068e-318a-4c9d-94aa-8453a9a15798",
+      "organizationName": "Demo Signage Co",
+      "roles": [
+        "Owner"
+      ],
+      "permissions": [
+        "audit.view",
+        "dashboard.view",
+        "devices.command",
+        "devices.manage",
+        "devices.pair",
+        "devices.view",
+        "groups.manage",
+        "layouts.manage",
+        "layouts.view",
+        "locations.manage",
+        "locations.view",
+        "media.manage",
+        "media.view",
+        "organization.manage",
+        "playlists.manage",
+        "playlists.view",
+        "roles.manage",
+        "schedules.manage",
+        "schedules.view",
+        "subscription.manage",
+        "subscription.view",
+        "users.manage",
+        "users.view"
+      ]
+    }
+  },
+  "validation": {
+    "title": "Validation failed",
+    "status": 400,
+    "detail": "One or more fields are invalid.",
+    "instance": "/api/locations",
+    "errors": {
+      "name": [
+        "name is required."
+      ],
+      "timeZone": [
+        "Choose a valid IANA time zone, for example Asia/Kolkata."
+      ]
+    },
+    "traceId": "0HNOO14QK6A14:00000001"
+  },
+  "notfound": {
+    "title": "Not found",
+    "status": 404,
+    "detail": "Device '00000000-0000-0000-0000-000000000001' was not found.",
+    "instance": "/api/devices/00000000-0000-0000-0000-000000000001",
+    "traceId": "0HNOO14QK6A15:00000001"
+  },
+  "pair_create": {
+    "pairingId": "62300516-0013-464a-8b3b-f9d9014322cd",
+    "code": "F2UVSP",
+    "pollSecret": "wM5UNy\u2026<redacted>",
+    "expiresAt": "2026-09-21T18:08:15.0399844Z",
+    "pollIntervalSeconds": 3
+  },
+  "playlist": {
+    "id": "3af4ab00-1776-4872-8a27-ff38650a43d4",
+    "name": "Browser loop 026742",
+    "description": "",
+    "shuffle": false,
+    "itemCount": 1,
+    "totalDurationSeconds": 10,
+    "updatedAt": "2026-09-21T17:30:23.203931Z",
+    "items": [
+      {
+        "id": "1a505b5c-acda-462f-96bc-40074f0762b6",
+        "mediaAssetId": "365671ed-d308-49b6-bec5-a8579307b9b1",
+        "mediaName": "brand-teal",
+        "mediaType": "Image",
+        "sortOrder": 0,
+        "durationSeconds": null,
+        "effectiveDurationSeconds": 10,
+        "transition": "fade",
+        "contentUrl": "/api/files/365671edd30849b6bec5a8579307b9b1?exp=1790035200&sig=<hmac>"
+      }
+    ]
+  },
+  "pair_status_pending": {
+    "status": "Pending",
+    "deviceId": null,
+    "deviceKey": null
+  },
+  "device": {
+    "id": "8d62f10f-c8cd-4682-a4b6-4721cbc19b2d",
+    "name": "Lobby TV",
+    "type": "AndroidTv",
+    "status": "Offline",
+    "orientation": "Landscape",
+    "locationId": null,
+    "locationName": null,
+    "defaultPlaylistId": "3af4ab00-1776-4872-8a27-ff38650a43d4",
+    "defaultPlaylistName": "Browser loop 026742",
+    "hardwareId": "android-9f2c",
+    "resolution": "3840x2160",
+    "appVersion": "android-1.0.0",
+    "osVersion": "Sony BRAVIA \u00b7 Android 12",
+    "ipAddress": "127.0.0.1",
+    "pairedAt": "2026-09-21T17:53:15.346379Z",
+    "lastSeenAt": null,
+    "lastSyncAt": null,
+    "syncedVersion": null,
+    "currentItem": null,
+    "freeStorageBytes": null,
+    "groups": []
+  },
+  "pair_status_paired": {
+    "status": "Paired",
+    "deviceId": "8d62f10f-c8cd-4682-a4b6-4721cbc19b2d",
+    "deviceKey": "eJ0Sbw\u2026<redacted>"
+  },
+  "schedule": {
+    "id": "00f6560b-5c82-4c45-8f7a-ec81ae90e92d",
+    "name": "Breakfast menu",
+    "layoutId": null,
+    "layoutName": null,
+    "playlistId": "3af4ab00-1776-4872-8a27-ff38650a43d4",
+    "playlistName": "Browser loop 026742",
+    "priority": 20,
+    "startDate": "2026-09-21",
+    "endDate": null,
+    "startTime": "07:00:00",
+    "endTime": "11:00:00",
+    "daysOfWeek": 62,
+    "isActive": true,
+    "targets": [
+      {
+        "deviceId": "8d62f10f-c8cd-4682-a4b6-4721cbc19b2d",
+        "deviceGroupId": null,
+        "name": "Lobby TV"
+      }
+    ],
+    "updatedAt": "2026-09-21T17:53:15.685953Z"
+  },
+  "manifest": {
+    "version": "d92b2c0753871690",
+    "generatedAt": "2026-09-21T17:53:15.9084689Z",
+    "device": {
+      "id": "8d62f10f-c8cd-4682-a4b6-4721cbc19b2d",
+      "name": "Lobby TV",
+      "orientation": "Landscape",
+      "timeZone": "Asia/Kolkata",
+      "organizationName": "Demo Signage Co"
+    },
+    "defaultPlaylistId": "3af4ab00-1776-4872-8a27-ff38650a43d4",
+    "schedules": [
+      {
+        "id": "00f6560b-5c82-4c45-8f7a-ec81ae90e92d",
+        "name": "Breakfast menu",
+        "priority": 20,
+        "layoutId": null,
+        "playlistId": "3af4ab00-1776-4872-8a27-ff38650a43d4",
+        "startDate": "2026-09-21",
+        "endDate": null,
+        "startTime": "07:00",
+        "endTime": "11:00",
+        "daysOfWeek": 62
+      }
+    ],
+    "layouts": [],
+    "playlists": [
+      {
+        "id": "3af4ab00-1776-4872-8a27-ff38650a43d4",
+        "name": "Browser loop 026742",
+        "shuffle": false,
+        "items": [
+          {
+            "mediaId": "365671ed-d308-49b6-bec5-a8579307b9b1",
+            "durationSeconds": 10,
+            "transition": "fade"
+          }
+        ]
+      }
+    ],
+    "media": [
+      {
+        "id": "365671ed-d308-49b6-bec5-a8579307b9b1",
+        "name": "brand-teal",
+        "type": "Image",
+        "mimeType": "image/png",
+        "sha256": "06d1dd9a36abd525d2f99959ea0b645336565cfe9da096030646114ff938b62c",
+        "sizeBytes": 4318,
+        "durationSeconds": 10,
+        "url": "/api/files/365671edd30849b6bec5a8579307b9b1?exp=1790618400&sig=<hmac>",
+        "sourceUrl": null
+      }
+    ]
+  },
+  "manifest_etag": "\"d92b2c0753871690\"",
+  "quota": null,
+  "media": [
+    {
+      "id": "922fe173-6eab-4a0d-9503-7ad5f32aaf38",
+      "name": "brand-teal",
+      "type": "Image",
+      "mimeType": "image/png",
+      "sizeBytes": 4318,
+      "sha256": "06d1dd9a36abd525d2f99959ea0b645336565cfe9da096030646114ff938b62c",
+      "width": 1280,
+      "height": 720,
+      "durationSeconds": 10,
+      "url": null,
+      "contentUrl": "/api/files/922fe1736eab4a0d95037ad5f32aaf38?exp=1790035200&sig=<hmac>",
+      "tags": null,
+      "createdAt": "2026-09-21T17:47:12.344918Z",
+      "usedInPlaylists": 1
+    }
+  ],
+  "dashboard": {
+    "devicesTotal": 6,
+    "devicesOnline": 1,
+    "devicesOffline": 5,
+    "mediaCount": 29,
+    "storageBytes": 23822,
+    "playlistCount": 17,
+    "activeSchedules": 8,
+    "unreadNotifications": 4,
+    "recentActivity": [
+      {
+        "id": "7ab65b78-f788-4432-9361-8895dfaba5c6",
+        "createdAt": "2026-09-21T17:53:15.685953Z",
+        "userEmail": "admin@demo.local",
+        "action": "schedule.created",
+        "summary": "Created schedule Breakfast menu targeting 1 device(s)/group(s)"
+      },
+      {
+        "id": "3b3fc92d-e1a2-48b3-83cc-77fb539045ac",
+        "createdAt": "2026-09-21T17:53:15.449081Z",
+        "userEmail": "admin@demo.local",
+        "action": "device.paired",
+        "summary": "Paired AndroidTv 'Lobby TV'"
+      },
+      {
+        "id": "31601e90-b7d3-4b10-83a1-33405d9e3ed9",
+        "createdAt": "2026-09-21T17:53:14.522676Z",
+        "userEmail": "admin@demo.local",
+        "action": "user.login",
+        "summary": "Signed in"
+      },
+      {
+        "id": "568d5cac-5107-4345-8f47-c9cfcf207db7",
+        "createdAt": "2026-09-21T17:48:01.18365Z",
+        "userEmail": "admin@demo.local",
+        "action": "device.removed",
+        "summary": "Unpaired and removed LAN TV"
+      },
+      {
+        "id": "b56f6d1d-fa1d-49ed-939e-923794ca1aec",
+        "createdAt": "2026-09-21T17:47:49.282916Z",
+        "userEmail": "admin@demo.local",
+        "action": "device.paired",
+        "summary": "Paired AndroidTv 'LAN TV'"
+      },
+      {
+        "id": "0cb1643b-4659-470f-a91b-abb95ac59236",
+        "createdAt": "2026-09-21T17:47:48.458307Z",
+        "userEmail": "admin@demo.local",
+        "action": "user.login",
+        "summary": "Signed in"
+      },
+      {
+        "id": "59f8ee6b-8348-4a29-930f-05bc725ddcf4",
+        "createdAt": "2026-09-21T17:47:23.204357Z",
+        "userEmail": "admin@demo.local",
+        "action": "device.removed",
+        "summary": "Unpaired and removed Browser TV efbd0a"
+      },
+      {
+        "id": "b5bf4f8c-e3f5-49ee-8709-66ce03e227ff",
+        "createdAt": "2026-09-21T17:47:22.351658Z",
+        "userEmail": "admin@demo.local",
+        "action": "layout.updated",
+        "summary": "Saved layout Main with sidebar layout (2 zones)"
+      }
+    ],
+    "devices": [
+      {
+        "id": "3ed795ac-c0b6-4828-812b-21008b7fc179",
+        "name": "Browser TV 026742",
+        "type": "WebPlayer",
+        "status": "Offline",
+        "orientation": "Landscape",
+        "lastSeenAt": "2026-09-21T17:30:26.592805Z",
+        "currentItem": null,
+        "location": null
+      },
+      {
+        "id": "1c291b06-3a85-4c7d-8636-0ff616628523",
+        "name": "Browser TV 3d7a5c",
+        "type": "WebPlayer",
+        "status": "Offline",
+        "orientation": "Landscape",
+        "lastSeenAt": null,
+        "currentItem": null,
+        "location": null
+      },
+      {
+        "id": "749b55fe-472a-45b4-93dc-c0fce125ba8d",
+        "name": "Extra 2 mubfjgqt",
+        "type": "WebPlayer",
+        "status": "Offline",
+        "orientation": "Landscape",
+        "lastSeenAt": null,
+        "currentItem": null,
+        "location": null
+      },
+      {
+        "id": "8d62f10f-c8cd-4682-a4b6-4721cbc19b2d",
+        "name": "Lobby TV",
+        "type": "AndroidTv",
+        "status": "Online",
+        "orientation": "Landscape",
+        "lastSeenAt": "2026-09-21T17:53:15.920707Z",
+        "currentItem": null,
+        "location": null
+      },
+      {
+        "id": "6c889cfc-9fa2-49e0-a221-659d09965138",
+        "name": "Lobby TV mubfiwqa",
+        "type": "AndroidTv",
+        "status": "Offline",
+        "orientation": "Landscape",
+        "lastSeenAt": "2026-09-21T15:58:07.383341Z",
+        "currentItem": null,
+        "location": "Lobby mubfiwqa"
+      },
+      {
+        "id": "6d3a5d03-d1e7-41f7-bd9e-02321e28cdb3",
+        "name": "Over mubfjgqt",
+        "type": "WebPlayer",
+        "status": "Offline",
+        "orientation": "Landscape",
+        "lastSeenAt": null,
+        "currentItem": null,
+        "location": null
+      }
+    ]
+  },
+  "subscription": {
+    "plan": "Pro",
+    "status": "Active",
+    "maxDevices": 100,
+    "maxUsers": 25,
+    "maxStorageBytes": 107374182400,
+    "startsAt": "2026-09-21T15:56:36.933464Z",
+    "endsAt": null,
+    "usage": {
+      "devices": 6,
+      "users": 8,
+      "storageBytes": 23822
+    },
+    "availablePlans": [
+      {
+        "plan": "Free",
+        "maxDevices": 3,
+        "maxUsers": 3,
+        "maxStorageBytes": 2147483648,
+        "monthlyPricePerScreen": 0
+      },
+      {
+        "plan": "Pro",
+        "maxDevices": 100,
+        "maxUsers": 25,
+        "maxStorageBytes": 107374182400,
+        "monthlyPricePerScreen": 12
+      },
+      {
+        "plan": "Enterprise",
+        "maxDevices": 10000,
+        "maxUsers": 1000,
+        "maxStorageBytes": 2147483648000,
+        "monthlyPricePerScreen": 20
+      }
+    ]
+  }
+}

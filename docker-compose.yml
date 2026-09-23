@@ -1,0 +1,20 @@
+services:
+  db:
+    image: postgres:16
+    environment: { POSTGRES_DB: signage, POSTGRES_USER: signage, POSTGRES_PASSWORD: ${DB_PASSWORD:-change-me} }
+    volumes: [ "pgdata:/var/lib/postgresql/data" ]
+    healthcheck: { test: ["CMD-SHELL", "pg_isready -U signage"], interval: 5s, retries: 10 }
+  api:
+    build: { context: ., dockerfile: backend/Dockerfile }
+    depends_on: { db: { condition: service_healthy } }
+    ports: [ "8080:8080" ]
+    environment:
+      ConnectionStrings__Default: Host=db;Database=signage;Username=signage;Password=${DB_PASSWORD:-change-me}
+      Jwt__SigningKey: ${JWT_SIGNING_KEY:?Set JWT_SIGNING_KEY to a random string of 32+ characters}
+      Swagger__Enabled: "true"
+      # Optional first-run owner account:
+      Seed__AdminEmail: ${SEED_ADMIN_EMAIL:-}
+      Seed__AdminPassword: ${SEED_ADMIN_PASSWORD:-}
+      Seed__OrganizationName: ${SEED_ORG_NAME:-My Organization}
+    volumes: [ "media:/data" ]
+volumes: { pgdata: {}, media: {} }
